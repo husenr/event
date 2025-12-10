@@ -37,6 +37,11 @@ func main() {
 	fmt.Scan(&rata_umur)
 	fmt.Println("Jika rata-rata umur = ", rata_umur, "tahun, maka...")
 	sisa := pengurangan(rata_umur, umur)
-	fmt.Println("Sisa umur anda :", sisa, "tahun")
+	if sisa >= 0 {
+		fmt.Println("Sisa umur anda :", sisa, "tahun")
+	} else {
+		sisa := -sisa
+		fmt.Println("Anda sudah dapat bonus sebesar ", sisa, "tahun")
+	}
 
 }
